@@ -2,6 +2,10 @@
 
 Repositório destinado aos interessados em participar do processo seletivo da SHARENERGY 2023/01. As vagas são voltadas para desenvolvimento de aplicações Web e Mobile.
 
+# Video de apresentação
+
+[Yves de Sá Barbosa](https://www.youtube.com/watch?v=GLO9LQ9gt98)
+
 ## Sobre a SHARENERGY
 
 No ramo da produção de energia fotovoltaica, há a modalidade de produção compartilhada. Nessa modalidade, diferentes pessoas investem na construção de uma mesma usina fotovoltaica e dividem o retorno finaceiro referente à energia gerada pela usina.
