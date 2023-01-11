@@ -1,0 +1,250 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Sharenergy Challenge documentation",
+    "description": "This is the api documentation for the challenge for the back-end developer position at sharenergy",
+    "version": "1.0.0",
+    "contact": {
+      "email": "yvesdsbarbosa44@gmail.com"
+    }
+  },
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Create a user",
+        "description": "Create a new user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username:": {
+                    "type": "string"
+                  },
+                  "password:": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "username": "User name sample",
+                  "password": "User description sample"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created successfully"
+          },
+          "400": {
+            "description": "User already exists"
+          },
+          "401": {
+            "description": "Username cannot be empty"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/users/sessions": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Authenticate a user",
+        "description": "Create a authentication user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username:": {
+                    "type": "string"
+                  },
+                  "password:": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "username": "User name sample",
+                  "password": "User description sample"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Authentication successful"
+          },
+          "401": {
+            "description": "Incorrect username/password combination"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/customers/create": {
+      "post": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Create a customer",
+        "description": "Create a new customer",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name:": {
+                    "type": "string"
+                  },
+                  "email:": {
+                    "type": "string"
+                  },
+                  "address:": {
+                    "type": "string"
+                  },
+                  "phone:": {
+                    "type": "string"
+                  },
+                  "document:": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "Customer name sample",
+                  "email": "Customer email sample",
+                  "address": "Customer address sample",
+                  "phone": "Customer phone sample",
+                  "document": "Customer document sample"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Customer created successfully"
+          },
+          "400": {
+            "description": "Customer already exists"
+          },
+          "401": {
+            "description": "Document cannot be empty"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/customers/update": {
+      "put": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Update a customer",
+        "description": "Updte a customer",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name:": {
+                    "type": "string"
+                  },
+                  "email:": {
+                    "type": "string"
+                  },
+                  "address:": {
+                    "type": "string"
+                  },
+                  "phone:": {
+                    "type": "string"
+                  },
+                  "document:": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "Customer name sample",
+                  "email": "Customer email sample",
+                  "address": "Customer address sample",
+                  "phone": "Customer phone sample",
+                  "document": "Customer document sample"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Customer update successfully"
+          },
+          "400": {
+            "description": "Customer already exists"
+          },
+          "401": {
+            "description": "Document cannot be empty"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/customers/delete": {
+      "delete": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Delete a customer",
+        "description": "delete a new customer",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "document:": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "document": "Customer document sample"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Customer delete successfully"
+          },
+          "400": {
+            "description": "Customer already exists"
+          },
+          "401": {
+            "description": "Document cannot be empty"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}
